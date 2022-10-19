@@ -1,20 +1,24 @@
 import React from 'react'
 
 const styles = {
-    card: {
-        width: '70%',
-        height: '300px',
-        background: '#F8F9FA',
-        border: '1px solid rgba(0, 0, 0, 0.17)',
-        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
-        borderRadius: '10px'
-    }
+  button: {
+    whiteSpace: 'normal',
+    background: '#0171C2',
+    border: '1px solid rgba(0, 0, 0, 0.17)',
+    boxShadow: '0px 1px 4px 0px #00000040',
+    borderRadius: '25px',
+    fontSize: '20px',
+    color: '#FFFFFF',
+    fontWeight: '400',
+    textAlign: 'center',
+    padding: '10px'
+  }
 };
 
-export const Button = () => {
+export const Button = ({textButton}) => {
   return (
     <>
-        <button>boton</button>
+        <button style={styles.button}>{textButton}</button>
     </>
   )
 }

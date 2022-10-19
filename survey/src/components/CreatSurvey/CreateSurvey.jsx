@@ -8,7 +8,8 @@ const styles = {
     width: '100%',
     marginTop: '200px',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flexDirection: 'column'
   }
 };
 
@@ -16,7 +17,7 @@ export const CreateSurvey = () => {
   return (
     <div style={styles.content}>
       <Card/>
-      <Button/> 
+      <Button textButton='Agregar preguntas'/> 
     </div>
   )
 }

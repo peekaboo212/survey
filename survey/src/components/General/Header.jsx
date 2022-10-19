@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../../../public/logo.png'
-import name from '../../../public/brand.png'
+import logo from '../../assets/logo.png'
+import name from '../../assets/brand.png'
 
 const styles = {
   header: {
