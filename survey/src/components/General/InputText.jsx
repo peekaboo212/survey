@@ -1,9 +1,9 @@
 import React from 'react'
-import CheckIcon from '@mui/icons-material/Check'
+// import CheckIcon from '@mui/icons-material/Check'
 
 const styles = {
     containerTitle: {
-        display: 'flex',
+        display: 'grid ',
         justifyContent: 'center',
         alignItems: 'center',
         margin: '40px'
@@ -17,6 +17,7 @@ const styles = {
         width: '10%'
     },
     inputText: {
+        gridArea: 'inputText',
         width: '96%',
         background: '#D5EFF5',
         border: '0',
@@ -55,7 +56,7 @@ export const InputText = ({setTitle, title}) => {
                 onChange={changeTitle}
                 onClick={clearInput}
                 required style={styles.inputText}/>
-            <img src={CheckIcon} style={styles.icon}></img>
+            {/* <CheckIcon></CheckIcon> */}
         </div>
     </div>
   )

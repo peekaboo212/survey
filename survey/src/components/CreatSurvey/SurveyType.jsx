@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {InputText} from '../General/InputText'
 
 const styles = {
@@ -19,13 +19,37 @@ export const SurveyType = () => {
 
     const [title, setTitle] = useState('Survey Title...')
 
+    const [dog, setDog] = useState('')
+
+    useEffect(() => {
+      getUser(); //CONSOLE
+    }, []);
+   
+      async function getUser() {
+        try {
+          const response = await fetch('http://localhost:3000/answeredSurvey');
+      
+          if (!response.ok) {
+            throw new Error(`Error! status: ${response.status}`);
+          }
+      
+          const result = await response.json();
+          return result;
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    
+
 
   return (
     <>
         <InputText setTitle={[setTitle, title]}/>
         &nbsp;
-        <p required style={styles.text}>Descripción:</p>
+        <p required style={styles.text}>{dog}</p>
         &nbsp;
+
+        
     </>
   )
 }
